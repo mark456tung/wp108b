@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="4topnav.css" />
+<link rel="stylesheet" type="text/css" href="4sidenav.css" />
+<link rel="stylesheet" type="text/css" href="4login.css" />
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="homepage.html">主頁</a>
+        <div class="dropdown">
+            <button class="dropbtn">上衣
+            <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+            <a href="shortsleeve.html">短袖</a>
+            <a href="longsleeve.html">長袖</a>
+            <a href="vest.html">背心</a>
+            <a href="coat.html">外套</a>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropbtn">褲子
+            <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+            <a href="shorts.html">短褲</a>
+            <a href="trousers.html">長褲</a>
+            </div>
+        
+        </div>
+        <span style="float:right;color:white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; 
+        聯絡資訊</span>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;float:right;">Login</button> <!--navbar上的登入-->
+
+        <div id="id01" class="modal">
+          
+          <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close"title="Close Modal">&times; </span>
+              
+            </div>
+        
+            <div class="container">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+        
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+                
+              <button type="submit">登入</button><!--彈出畫面的登入-->
+              
+            </div>
+        
+            <div class="container" style="background-color:#f1f1f1">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="button" class="signupbtn" onclick="location.href='要前往的網頁連結'" >Singup</button>
+              
+            </div>
+          </form>
+        </div>
+        
+       
+    </div>
+    
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">about</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+
+
+
+    
+<script>
+  // Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+
+</body>
+</html>
