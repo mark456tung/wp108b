@@ -1,72 +1,72 @@
-/* Navbar container */
+/* Navbar 的屬性 */
 .topnav {
-  border:1px solid white;
-   overflow: hidden;
-   background-color: #333;
-   font-family: Arial;
+  border:1px solid white;/*邊線顏色.大小*/
+   overflow: hidden;/*若overflow scroll隱藏*/
+   background-color: #333;/*背景顏色*/
+   font-family: Arial, Helvetica, sans-serif;
  }
  
- /* Links inside the navbar */
+ /* navbar裡的連結屬性 */
  .topnav a {
    
-   float: left;
-   font-size: 20px;
-   color: white;
-   text-align: center;
-   padding: 14px 16px;
-   text-decoration: none;
+   float: left;/*位置置左*/
+   font-size: 20px;/*字體大小*/
+   color: white;/*顏色*/
+   text-align: center;/*字置中*/
+   padding: 14px 16px; /*邊距*/
+   text-decoration: none; /*不顯示裝飾ex:底線.顏色*/
  }
  
  /* The dropdown container */
  .dropdown {
-   float: left;
-   overflow: hidden;
+   float: left;/*位置置左*/
+   overflow: hidden;/*若overflow scroll隱藏*/
  }
  
  /* Dropdown button */
  .dropdown .dropbtn {
-   font-size: 20px;
-   border:none;
-   outline: none;
-   color: white;
-   padding: 14px 16px;
-   background-color: inherit;
-   font-family: inherit; /* Important for vertical align on mobile phones */
-   margin: 0; /* Important for vertical align on mobile phones */
+   font-size: 20px;/*字體大小*/
+   border:none;/*無邊線*/
+   outline: none;/*無邊框*/
+   color: white;/*字體顏色*/
+   padding: 14px 16px;/*邊距*/
+   background-color: inherit;/*背景顏色繼承*/
+   font-family: inherit; /*字體繼承*/
+   margin: 0; /*邊界 */
  }
  
- /* Add a red background color to navbar links on hover */
+ /* 當鼠標在dropdown上的連結時顏色會變*/
  .topnav a:hover, .dropdown:hover .dropbtn {
-   background-color: red;
+   background-color:blue;
  }
  
- /* Dropdown content (hidden by default) */
+ /*使dropdown裡的內容默認不顯示 */
  .dropdown-content {
    display: none;
    position: absolute;
    background-color: #f9f9f9;
-   min-width: 160px;
-   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-   z-index: 1;
+   min-width: 160px;/*最小大小*/
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);/*rgb及透明度*/
+   z-index: 1;/*使之在上層圖層*/
  }
  
- /* Links inside the dropdown */
+ /* dropdown裡的連結*/
  .dropdown-content a {
-   float: none;
-   color: black;
-   padding: 12px 16px;
-   text-decoration: none;
-   display: block;
-   text-align: left;
+   float: none;/*位置*/
+   color: black;/*字體顏色*/
+   padding: 12px 16px;/*上下.左右邊距*/
+   text-decoration: none;/*字體無裝飾ex邊線.顏色*/
+   display: block;/*呈現方式*/
+   text-align: left; /*字體位置*/
  }
  
- /* Add a grey background color to dropdown links on hover */
+ /* dropdown裡的顏色(鼠標在上時背景變色) */
  .dropdown-content a:hover {
    background-color: #ddd;
 
  }
  
- /* Show the dropdown menu on hover */
+ /*滑鼠移動到dropdown時顯示下dropdown選項 */
  .dropdown:hover .dropdown-content {
    display: block;
  }

@@ -1,6 +1,5 @@
-body {font-family: Arial, Helvetica, sans-serif;}
 
-/* Full-width input fields */
+/* 設定帳號密碼框的屬性 */
 input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
@@ -10,7 +9,7 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
-/* Set a style for all buttons */
+/* 設定所有button的屬性 */
 button {
   background-color: #333;
   color: white;
@@ -20,12 +19,17 @@ button {
   font-size: 20px;
   width: 100%;
 }
-
+/*當滑鼠在button上時透明度為0.8*/
 button:hover {
   opacity: 0.8;
 }
-
-/* Extra styles for the cancel button */
+/*叉叉按鈕的位置*/
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+/* 額外設定cancelbutton及signupbutton的屬性 */
 .cancelbtn {
   width: auto;
   padding: 10px 18px;
@@ -38,49 +42,35 @@ button:hover {
   margin: 20px 0px;
   background-color: #333;
   float:right;
-  
 }
-/* Center the image and position the close button */
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;
-  }
+
+
 .container {
   padding: 16px;
   margin: 20px 0px 0px 0px;
   overflow: auto;
 }
 
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* The Modal (background) */
+/* 登入視窗 */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
+  display: none; /* 隱藏介面 */
+  position: fixed; /* 固定位置 */
+  z-index: 1; /* 使層排列在上*/
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 40px;
-}
+  background-color: rgba(0,0,0,0.4); /*視窗彈出時背景的顏色*/
+  }
 
-/* Modal Content/Box */
+/* 設定登入視窗的位置*/
 .modal-content {
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 40%; /* Could be more or less, depending on screen size */
+  border: 1px solid #888;/*視窗邊線顏色*/
+  width: 40%; /* 登入框的大小 */
 }
 
-/* The Close Button (x) */
+/* 關閉鈕(x) */
 .close {
   position: absolute;
   right: 25px;
@@ -89,14 +79,14 @@ span.psw {
   font-size: 35px;
   font-weight: bold;
 }
-
+/*移動關閉鈕上或按著的時候將顏色變成紅色的*/
 .close:hover,
 .close:focus {
   color: red;
   cursor: pointer;
 }
 
-/* Add Zoom Animation */
+/* 啟動登入介面的動畫 */
 .animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s
@@ -112,12 +102,3 @@ span.psw {
   to {transform: scale(1)}
 }
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-
-  span.psw {
-     display: block;
-     float: none;
-  }
-  
-}

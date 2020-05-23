@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>homepage</title>
+  </head>
     <style>
+      /*引入圖片及設定他的大小*/
         body{
             background-image: url("4img/background/background.jpg");
             background-size: 100%;
         }
-        
+        /*中間字樣的屬性*/
         .center{
-        color: white;
-        text-shadow: 8px 8px blue;
-        font-size: 10vw;
-        position: absolute;
+        color: white;/*字體顏色為白*/
+        text-shadow: 8px 8px blue;/*讓字體有藍色陰影*/
+        font-size: 10vw;/*字體大小,且會隨頁面大小變化*/
+        position: absolute;/*位置編排*/
+        /*置中*/
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -27,15 +32,15 @@
         
 	</body>
 </html>
-<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script src="https://www.w3schools.com/lib/w3.js">//引用html所需的外來js(從網路上找資料後依樣畫葫蘆的，對code不甚了解只知道如此應用</script>
 <script>
 	w3.includeHTML();
 
     function openNav() {
       document.getElementById("mySidenav").style.width = "250px";
-    }
+    }//側欄開啟
     
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
-    }
+    }//側欄關閉
 </script>

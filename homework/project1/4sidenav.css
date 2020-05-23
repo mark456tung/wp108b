@@ -1,37 +1,38 @@
+/*sidenavbar的屬性*/
 .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
+    height: 100%; /*高度*/
+    width: 0;/*原本寬度0使之隱藏,透過js使之有寬度便可顯示*/
+    position: fixed;/*固定位置*/
+    z-index: 1;/*圖層置上*/
+    top: 0; /*上*/
+    right: 0;/*右*/
     background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+    overflow-x: hidden;/*x軸scroll即便超過也不顯示*/
+    transition: 0.5s;/*轉場動畫時間*/
+    padding-top: 60px;/*設定上方邊距*/
   }
-  
+  /*sidnavbar裡的連結的屬性*/
   .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+    padding: 8px 8px 8px 32px; /*上右下左邊距*/
+    text-decoration: none; /*字體裝飾關閉ex:畫線.顏色*/
+    font-size: 25px; /*字體大小*/
+    color: #818181; /*字體顏色*/
+    display: block; /*呈現方式*/
+    transition: 0.3s; /*轉場動畫時間*/
   }
-  
+  /*移動到 sidnav裡的連結時字體變色*/
   .sidenav a:hover {
     color: #f1f1f1;
   }
-  
+  /*關閉sidenavbar的按鈕的屬性*/
   .sidenav .closebtn {
-    position: absolute;
+    position: absolute; 
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
   }
-  
+  /*Responsive layout當螢幕小於450px時的變動*/
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}

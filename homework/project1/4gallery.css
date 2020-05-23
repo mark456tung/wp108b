@@ -1,72 +1,59 @@
+/*使div的寬度就已經包含了內容的寬度*/
 * {
   box-sizing: border-box;
 }
-
+/*body的背景色.邊距及字型*/
 body {
-  background-color: #f1f1f1;
+  background-color: #f1f1f1; 
   padding: 20px;
   font-family: Arial;
 }
 
-/* Center website */
-.main {
-  
-  margin: auto;
-}
 
-h1 {
-  font-size: 50px;
-  word-break: break-all;
-}
 
+/*設定row的邊界*/
 .row {
   margin: 8px -16px;
 }
 
-/* Add padding BETWEEN each column */
+/*選擇所有row及所有parent是row的column來設定邊距*/
 .row,
 .row > .column {
   padding: 8px;
 }
 
-/* Create four equal columns that floats next to each other */
+/* 使四個區塊平分且相鄰 */
 .column {
   float: left;
   width: 25%;
 }
 
-/* Clear floats after rows */ 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
-/* Content */
+/* Content的背景及邊距 */
 .content {
   background-color: white;
   padding: 10px;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
+/* Responsive layout - 螢幕小於900px時區塊為兩個並列(原本四個)*/
 @media screen and (max-width: 900px) {
   .column {
     width: 50%;
   }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* Responsive layout - 螢幕小於600px時區塊將呈現直排而非橫排並列 */
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
   }
 }
-
+/*鼠標未移動到圖片會呈現半透明*/
 .content img {
  opacity:0.8;
  cursor: pointer; 
  }
- 
+ /*鼠標移動到圖片時會恢復為全不透明*/
 .content img:hover {
  opacity:1;
  }

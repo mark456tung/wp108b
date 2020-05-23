@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>
+    註冊
+  </title><!--頁面標題-->
 <style>
-* {
-  font-size: 20px;
-  margin: 0px;
-  font-family: 微軟正黑體;
+* {/*選擇所有元素*/
+  font-size: 20px;/*字體大小*/
+  margin: 0px;/*邊距*/
+  font-family: 微軟正黑體;/*字體*/
  
 }
 
-
+/*放text的框框的長寬*/
 textarea {
   width: 100%;
   height: 100px;
   
 }
+/*button的邊距 背景顏色 邊線顏色.粗細實線*/
 button {
   padding: 10px;
   background-color:red;
   border: 2px solid black;
 }
+/*for帳號密碼信箱的邊距及字體大小*/
 input {
   padding: 6px;
   font-size: 16px;
 }
-
+/*使以下這些元素的邊角變成圓的*/
 input, textarea, button {
   border-radius: 5px;
 }
-
+/*main的頁邊及邊距還有字體*/
 .main {
     margin:60px;
     padding: 40px;
     font-family: 微軟正黑體;
 }
+/*外框線的屬性*/
 fieldset{
   border: solid 3px #000000;
  
 }
+/*外框線裡的字的大小*/
 legend{
 	font-size: 30px;
 }
@@ -45,19 +52,20 @@ legend{
 </head>
 <body>
   
-<div w3-include-html="navbar.html"></div>
+<div w3-include-html="navbar.html"></div><!--引入navbar.html-->
 
 <div class="main">
     <form style="color:black">
         <fieldset>
           <legend>個人資料</legend>
+          <!--設定帳號密碼信箱輸入框-->
         <label for="username">帳號:</label><br>
         <input type="text" id="username" name="username"><br>
         <label for="pwd">密碼:</label><br>
         <input type="password" id="pwd" name="pwd"><br/>
         <label for="email">信箱:</label><br>
         <input type="email" name="email"/><br/>
-      
+         <!--血型選擇按鈕-->
         <label>血型</label><br>
       <select id="bt" name="bt">
         <option value="A">A</option>
@@ -65,23 +73,26 @@ legend{
         <option value="O">O</option>
         <option value="AB">AB</option>
       </select><br/>
+        <!--選擇日期(有日曆可選)-->
         <label for="birthday">生日:</label><br/>
         <input type="date" id="birthday" name="birthday">
         <br/>
-        
+        <!--性別勾選(圓形)-->
         <label for="sex">性別:</label><br>
         <input type="radio" name="sex" value="male" /> 男
         <input type="radio" name="sex" value="female"/> 女
         <input type="radio" name="sex" value="others"/>其他
         <input type="radio" name="sex" value="unknown" checked/>不便告知<br/>
-        
+        <!--上傳照片-->
         <label for="picture">照片:</label><br>
         <input type="file" name="picture"/><br/>
-      
+        <!--一個textbox-->
         <label>留言:</label><br/>
       <textarea name="message">
       
       </textarea>
+
+      <!--勾選(方形)-->
       <input type="checkbox" name="subscribe" value="subscribe">
       <label>訂閱請打勾</label><br/>
       <input type="checkbox" name="check" value="check">
@@ -95,15 +106,15 @@ legend{
 
 </body>
 </html>
-<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script src="https://www.w3schools.com/lib/w3.js">//引用html(for navbar)所需的外來js(從網路上找資料後依樣畫葫蘆的，對code不甚了解只知道如此應用</script>
 <script>
 	w3.includeHTML();
 
     function openNav() {
       document.getElementById("mySidenav").style.width = "250px";
-    }
+    }//側欄開啟
     
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
-    }
+    }//側欄關閉
 </script>

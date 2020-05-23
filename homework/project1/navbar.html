@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!--引入css-->
 <link rel="stylesheet" type="text/css" href="4topnav.css" />
 <link rel="stylesheet" type="text/css" href="4sidenav.css" />
 <link rel="stylesheet" type="text/css" href="4login.css" />
 </head>
 <body>
+  <!--topnav的區塊在此加入連結-->
     <div class="topnav">
         <a class="active" href="homepage.html">主頁</a>
         <div class="dropdown">
@@ -17,7 +19,7 @@
             <a href="longsleeve.html">長袖</a>
             </div>
         </div>
-        
+        <!--topnavbar裡的dropdown 在此加入連結-->
         <div class="dropdown">
             <button class="dropbtn">褲子
             <i class="fa fa-caret-down"></i>
@@ -26,12 +28,12 @@
             <a href="shorts.html">短褲</a>
             <a href="trousers.html">長褲</a>
             </div>
-        
+        <!--sidenavbar-->
         </div>
         <span style="float:right;color:white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; 
-        聯絡資訊</span>
+        聯絡資訊</span><!--#9776為UTF-8裡的"☰"符號--->
         <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;float:right;">登入</button> <!--navbar上的登入-->
-
+        <!--彈出視窗-->
         <div id="id01" class="modal">
           
           <form class="modal-content animate" action="/action_page.php" method="post">
@@ -39,7 +41,7 @@
               <span onclick="document.getElementById('id01').style.display='none'" class="close"title="Close Modal">&times; </span>
               
             </div>
-        
+            <!--帳號密碼輸入框-->
             <div class="container">
               <label for="uname"><b>帳號</b></label>
               <input type="text" placeholder="Enter Username" name="uname" required>
@@ -50,7 +52,7 @@
               <button type="submit">登入</button><!--彈出畫面的登入-->
               
             </div>
-        
+           <!--取消及註冊的設定-->
             <div class="container" style="background-color:#f1f1f1">
               <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">取消</button>
               <button type="button" class="signupbtn" onclick="location.href='form.html'" >註冊</button>
@@ -61,7 +63,7 @@
         
        
     </div>
-    
+    <!--sidenavbar的設定-->
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a href="personalpage.html">關於我</a>
@@ -73,21 +75,16 @@
 
 
     
-<script>
+<script>//
   // Get the modal
 var modal = document.getElementById('id01');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-    function openNav() {
+
+    function openNav() {//彈出sidenavbar視窗
       document.getElementById("mySidenav").style.width = "250px";
     }
     
-    function closeNav() {
+    function closeNav() {//收回sidenavbar視窗
       document.getElementById("mySidenav").style.width = "0";
     }
     </script>
