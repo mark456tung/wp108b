@@ -1,6 +1,6 @@
-這是我這學期的學習筆記<p>
+</h1>這是我這學期的學習筆記</h1>
 
-學習時的參考網站<p>
+
 主要網站<p>
 [w3school](https://www.w3schools.com/html/default.asp)css和html打底的好地方<p>
 [陳鐘誠老師的部落格](https://misavo.com/blog/%E9%99%B3%E9%8D%BE%E8%AA%A0)老師把一些較重要的js程式碼東西整理在部落格裡，省去了在w3school大海撈針的時間<p>
